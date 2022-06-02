@@ -43,11 +43,316 @@ body .wrapper {
   overflow: hidden;
   height: 100%;
 }
-body .wrapper #header .header__container {
-  padding: 20px 0px 120px 0px;
+body .wrapper #header {
+  font-family: "Lato";
 }
-body .wrapper #header .header__container .header__header {
-  margin-bottom: 120px;
+body .wrapper #header .modals .modals__wrapper {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body .wrapper #header .modals .modals__wrapper .modal {
+  background-color: #fff;
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 32px;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  display: none;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal,
+body .wrapper #header .modals .modals__wrapper .register__modal {
+  padding: 20px 0px 30px 0px;
+  min-width: 486px;
+  font-family: "Lato";
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-title,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-title {
+  margin: 0px 0px 26px 0px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-descr,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-descr {
+  width: 484px;
+  margin: 0px 48px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  line-height: 150%;
+  text-align: center;
+  color: #787a80;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form {
+  margin: 0px 32px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .data__info-form__item:not(:last-child),
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .data__info-form__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .data__info-form__item .data__form-item__text,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .data__info-form__item .data__form-item__text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #424551;
+  margin-bottom: 8px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .data__info-form__item .data__form-item__input,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .data__info-form__item .data__form-item__input {
+  padding: 13px 16px;
+  min-width: 466px;
+  background-color: #fff;
+  border: 1px solid #d7dadd;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9a9ca5;
+  outline: none;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__input,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__label,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__label {
+  max-width: 287px;
+  padding-left: 28px;
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 16px;
+  color: #424551;
+  cursor: pointer;
+  position: relative;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__label::before,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 1px solid #ff3f3a;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 0.12s linear;
+  transition: all 0.12s linear;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__input:checked + .subscribe__info-checkbox__label::before,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .subscribe__info-checkbox .subscribe__info-checkbox__input:checked + .subscribe__info-checkbox__label::before {
+  background-color: #ff3f3a;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .login__form-footer__text,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .login__form-footer__text {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 150%;
+  text-align: right;
+  color: #424551;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .login__modal-form__footer .login__form-footer__text:hover,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .login__modal-form__footer .login__form-footer__text:hover {
+  color: #ff3f3a;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .modal__button,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .modal__button {
+  width: 100%;
+  padding: 0px 40px;
+  min-height: 52px;
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #ff4242;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  margin-top: 24px;
+}
+body .wrapper #header .modals .modals__wrapper .login__modal .login__modal-form .modal__button:hover,
+body .wrapper #header .modals .modals__wrapper .register__modal .login__modal-form .modal__button:hover {
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  color: #ffffff;
+}
+body .wrapper #header .modals .modals__wrapper .register__modal .subscribe__info-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .wrapper #header .modals .modals__wrapper .register__modal .subscribe__info-checkbox .subscribe__info-checkbox__input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+body .wrapper #header .modals .modals__wrapper .register__modal .subscribe__info-checkbox .subscribe__info-checkbox__label {
+  max-width: 287px;
+  padding-left: 28px;
+  line-height: 160%;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: #424551;
+  cursor: pointer;
+  position: relative;
+}
+body .wrapper #header .modals .modals__wrapper .register__modal .subscribe__info-checkbox .subscribe__info-checkbox__label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 1px solid #ff3f3a;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 0.12s linear;
+  transition: all 0.12s linear;
+}
+body .wrapper #header .modals .modals__wrapper .register__modal .subscribe__info-checkbox .subscribe__info-checkbox__input:checked + .subscribe__info-checkbox__label::before {
+  background-color: #ff3f3a;
+}
+body .wrapper #header .modals .modal.modal__open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+}
+body .wrapper #header .modals__wrapper.modals__wrapper-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+}
+body .wrapper #header :root {
+  --top-primary-color: #424551;
+  --center-primary-color: #1e212c;
+}
+body .wrapper #header .btn__homepage {
+  padding: 0px 40px;
+  min-height: 52px;
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.12s linear;
+  transition: all 0.12s linear;
+  cursor: pointer;
+}
+body .wrapper #header .btn__homepage:hover {
+  background: transparent;
+  color: #ff4242;
+}
+body .wrapper #header .header__mobile {
+  position: fixed;
+  top: 62px;
+  left: -100%;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(232, 232, 232);
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 375px) {
+  body .wrapper #header .header__mobile {
+    top: 40px;
+  }
+}
+body .wrapper #header .header__mobile.open {
+  left: 0;
+}
+body .wrapper #header .header__container {
+  padding: 0px 10px;
+}
+body .wrapper #header .header__container .header__top {
+  padding-top: 20px;
+  margin-bottom: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,41 +362,80 @@ body .wrapper #header .header__container .header__header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-body .wrapper #header .header__container .header__header .header__header-left {
+@media (max-width: 375px) {
+  body .wrapper #header .header__container .header__top {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 0;
+  }
+}
+body .wrapper #header .header__container .header__top .header__top-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-body .wrapper #header .header__container .header__header .header__header-left .header__logo-img__box {
+body .wrapper #header .header__container .header__top .header__top-left .header__top-left__img {
+  cursor: pointer;
   margin-right: 60px;
 }
-body .wrapper #header .header__container .header__header .header__header-left .header__logo-img__box .header__logo-img {
-  cursor: pointer;
+@media (max-width: 375px) {
+  body .wrapper #header .header__container .header__top .header__top-left .header__top-left__img {
+    margin: 0;
+  }
 }
-body .wrapper #header .header__container .header__header .header__header-left .header__menu .menu__list {
+body .wrapper #header .header__container .header__top .header__top-left .header__top-left__menu .header__left-menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-body .wrapper #header .header__container .header__header .header__header-left .header__menu .menu__list .menu__item:not(:last-child) {
+body .wrapper #header .header__container .header__top .header__top-left .header__top-left__menu .header__left-menu__list .header__menu-list__item:not(:last-child) {
   margin-right: 40px;
 }
-body .wrapper #header .header__container .header__header .header__header-left .header__menu .menu__list .menu__item .menu__item-link {
+body .wrapper #header .header__container .header__top .header__top-left .header__top-left__menu .header__left-menu__list .header__menu-list__item .header__list-item__link {
   font-family: "Lato";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   text-align: center;
-  color: #424551;
+  color: var(--top-primary-color);
   cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
-body .wrapper #header .header__container .header__header .header__header-right {
+body .wrapper #header .header__container .header__top .header__top-left .header__top-left__menu .header__left-menu__list .header__menu-list__item .header__list-item__link:hover {
+  color: #ff3f3a;
+}
+body .wrapper #header .header__container .header__top .header__top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 375px) {
+  body .wrapper #header .header__container .header__top .header__top-right {
+    display: none;
+  }
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__button {
+  margin-right: 36px;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,61 +443,122 @@ body .wrapper #header .header__container .header__header .header__header-right {
       -ms-flex-align: center;
           align-items: center;
 }
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__button {
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__img {
+  margin-right: 8px;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--top-primary-color);
+  text-align: center;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__text .header__login-text__login {
+  cursor: pointer;
+  margin-right: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__text .header__login-text__login:hover {
+  color: #ff4242;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__text .header__login-text__register {
+  margin-left: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+body .wrapper #header .header__container .header__top .header__top-right .header__top-right__login .header__right-login__text .header__login-text__register:hover {
+  color: #ff4242;
+}
+body .wrapper #header .header__container .header__top .header__hamb {
+  display: none;
+  visibility: hidden;
+}
+body .wrapper #header .header__container .header__top .header__hamb .header__hamb-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .wrapper #header .header__container .header__top .header__hamb .header__hamb-field .header__hamb-field__line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #ff4242;
+}
+body .wrapper #header .header__container .header__top .header__hamb .header__hamb-field .header__hamb-field__line:not(:last-child) {
+  margin-bottom: 6px;
+}
+body .wrapper #header .header__container .header__top .header__hamb .header__hamb-field:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (max-width: 1120px) {
+  body .wrapper #header .header__container .header__top .header__hamb {
+    display: block;
+    visibility: visible;
+  }
+  body .wrapper #header .header__container .header__top .header__hamb .header__hamb-field {
+    position: relative;
+  }
+  body .wrapper #header .header__container .header__top .header__hamb.active .header__hamb-field__line:nth-child(2) {
+    opacity: 0;
+  }
+  body .wrapper #header .header__container .header__top .header__hamb.active .header__hamb-field__line:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  body .wrapper #header .header__container .header__top .header__hamb.active .header__hamb-field__line:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+body .wrapper #main .btn__homepage {
   padding: 0px 40px;
-  margin-right: 36px;
   min-height: 52px;
-  border: none;
+  border: 1px solid #ff3f3a;
   border-radius: 4px;
   background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
   font-family: "Lato";
   font-weight: 700;
   font-size: 16px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
+  -webkit-transition: all 0.12s linear;
+  transition: all 0.12s linear;
   cursor: pointer;
 }
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .wrapper #main .btn__homepage:hover {
+  background: transparent;
+  color: #ff4242;
 }
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__login .header__login-img__box {
-  margin-right: 8px;
+body .wrapper #main .heading .heading__container {
+  margin-bottom: 120px;
 }
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__login .header__login-info__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .wrapper #main .heading .heading__container .heading__text {
+  display: block;
   font-family: "Lato";
-  font-weight: 700;
-  font-size: 16px;
-  color: #424551;
-  text-align: center;
-}
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__login .header__login-info__box .header__login-info__login {
-  cursor: pointer;
-}
-body .wrapper #header .header__container .header__header .header__header-right .header__header-right__login .header__login-info__box .header__login-info__register {
-  cursor: pointer;
-}
-body .wrapper #header .header__container .header__body .header__body-text {
-  font-family: "Lato";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1px;
-  color: #ff3f3a;
+  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 12px;
+  color: #ff3f3a;
+  margin-bottom: 14px;
 }
-body .wrapper #header .header__container .header__body .header__body-title {
+body .wrapper #main .heading .heading__container .heading__title {
   max-width: 1020px;
   margin: 0 auto;
   font-family: "Lato";
@@ -164,7 +569,7 @@ body .wrapper #header .header__container .header__body .header__body-title {
   color: #1e212c;
 }
 body .wrapper #main .about .about__container {
-  padding: 120px 0px 180px 0px;
+  padding: 10px 0px 130px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,19 +669,10 @@ body .wrapper #main .about .about__container .about__right .about__right-item .a
 }
 body .wrapper #main .about .about__container .about__right .about__right-button {
   margin-top: 40px;
+  width: 100%;
   max-height: 44px;
   padding: 0px 163px;
-  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-  border: none;
-  border-radius: 4px;
-  font-family: "Lato";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 44px;
   text-align: center;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  cursor: pointer;
 }
 body .wrapper #main .curator .curator__container {
   padding-bottom: 180px;
@@ -302,6 +698,12 @@ body .wrapper #main .curator .curator__container .curator__img-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: none;
+  border-radius: 4px;
+}
+body .wrapper #main .curator .curator__container .curator__img-box .curator__img {
+  width: 96%;
+  height: 100%;
 }
 body .wrapper #main .curator .curator__container .curator__content .curator__content-text {
   font-family: "Lato";
@@ -590,16 +992,7 @@ body .wrapper #main .cta .cta__container .cta__body .cta__body-inputs__block .ct
 body .wrapper #main .cta .cta__container .cta__body .cta__body-button {
   padding: 0px 32px;
   min-height: 44px;
-  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-  border: none;
-  border-radius: 4px;
-  font-family: "Lato";
-  font-weight: 700;
-  font-size: 14px;
   text-align: center;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  cursor: pointer;
 }
 body .wrapper #main .forWhom .forWhom__container {
   padding-bottom: 126px;
@@ -647,7 +1040,7 @@ body .wrapper #main .forWhom .forWhom__container .forWhom__right-list .forWhom__
 }
 body .wrapper #main .forWhom .forWhom__container .forWhom__right-list .forWhom__right-list__item .forWhom__right-text {
   font-family: "Lato";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   color: #424551;
@@ -716,7 +1109,7 @@ body .wrapper #main .program .program__container .program__left .program__left-a
 }
 body .wrapper #main .program .program__container .program__left .program__left-accordions .program__accordion-item .program__accordion-item__top .program__accordion-item__title {
   font-family: "Lato";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   color: #1e212c;
 }
@@ -732,7 +1125,7 @@ body .wrapper #main .testimonials {
   background: #f4f5f7;
 }
 body .wrapper #main .testimonials .testimonials__uniqcontainer {
-  padding: 80px 5px 180px 5px;
+  padding: 80px 5px 50px 5px;
   margin: 0 auto;
   width: 1252px;
 }
@@ -855,9 +1248,6 @@ body .wrapper #main .testimonials .testimonials__uniqcontainer .testimonials__bo
   font-size: 14px;
   color: #787a80;
 }
-body .wrapper #main .register {
-  background: #f4f5f7;
-}
 body .wrapper #main .register .register__container {
   padding: 180px 0px 100px 0px;
   display: -webkit-box;
@@ -949,19 +1339,10 @@ body .wrapper #main .register .register__container .register__info .register__in
   font-size: 16px;
   color: #9a9ca5;
 }
-body .wrapper #main .register .register__container .register__info .register__info-button {
+body .wrapper #main .register .register__container .register__info .register__info-form .register__info-button {
   min-width: 100%;
   min-height: 52px;
-  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-  border: none;
-  border-radius: 4px;
-  font-family: "Lato";
-  font-weight: 700;
-  font-size: 16px;
   text-align: center;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  cursor: pointer;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container {
   padding: 120px 0px 180px 0px;
@@ -1036,6 +1417,9 @@ body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__
   overflow: hidden;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__body .relatedCourses__wrapper .relatedCourses__item .relatedCourses__item-img__block .relatedCourses__item-img__box {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1047,20 +1431,21 @@ body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__
           justify-content: center;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__body .relatedCourses__wrapper .relatedCourses__item .relatedCourses__item-img__block .relatedCourses__item-img__box .relatedCourses__item-img {
-  height: 300px;
-  width: 300px;
+  width: 100%;
+  height: 100%;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__body .relatedCourses__wrapper .relatedCourses__item .relatedCourses__item-info {
   padding: 32px;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__body .relatedCourses__wrapper .relatedCourses__item .relatedCourses__item-info .relatedCourses__item-info__text {
   display: inline-block;
-  padding: 1px 8px;
+  padding: 3px 8px;
   font-family: "Lato";
   font-weight: 400;
   font-size: 14px;
-  color: #ffffff;
-  background-color: #03cea4;
+  color: #1e212c;
+  border: 1px solid #1e212c;
+  border-radius: 4px;
   margin-bottom: 20px;
 }
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__body .relatedCourses__wrapper .relatedCourses__item .relatedCourses__item-info .relatedCourses__item-info__title {
@@ -1114,16 +1499,7 @@ body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__
 body .wrapper #main .relatedCourses .relatedCourses__container .relatedCourses__footer .relatedCourses__footer-button {
   padding: 0px 32px;
   min-height: 44px;
-  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-  border: none;
-  border-radius: 4px;
-  font-family: "Lato";
-  font-weight: 700;
-  font-size: 14px;
   text-align: center;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  cursor: pointer;
 }
 body .wrapper #footer {
   font-family: "Lato";

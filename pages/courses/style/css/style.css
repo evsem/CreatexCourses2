@@ -674,11 +674,17 @@ body .wrapper #main .courses .courses__container .courses__body .courses__body-i
   color: #1e212c;
 }
 body .wrapper #main .courses .courses__container .courses__body .courses__body-item .courses__item-content .courses__item-content__title {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
   color: #1e212c;
   margin-bottom: 20px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+body .wrapper #main .courses .courses__container .courses__body .courses__body-item .courses__item-content .courses__item-content__title:hover {
+  color: #ff4242;
 }
 body .wrapper #main .courses .courses__container .courses__body .courses__body-item .courses__item-content .backcolor {
   background-color: #ecec72;

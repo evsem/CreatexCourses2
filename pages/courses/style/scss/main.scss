@@ -128,11 +128,16 @@
             }
 
             .courses__item-content__title {
+              display: block;
               font-weight: 700;
               font-size: 20px;
               line-height: 150%;
               color: #1e212c;
               margin-bottom: 20px;
+              transition: color 0.2s;
+              &:hover {
+                color: #ff4242;
+              }
             }
             .backcolor {
               background-color: #ecec72;

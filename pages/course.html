@@ -17,72 +17,224 @@
       src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
       defer
     ></script>
-    <script src="./course/main.js" defer></script>
+    <script src="./course/course.js" defer></script>
 
     <title>Course</title>
   </head>
   <body>
     <div class="wrapper">
       <header id="header">
+        <section class="modals">
+          <div class="modals__wrapper">
+            <div class="login__modal modal" data-modal="login__modal">
+              <h2 class="login__modal-title">Sign in</h2>
+              <p class="login__modal-descr">
+                Sign in to your account using email and password provided during
+                registration.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="login__modal-form__footer">
+                  <div class="subscribe__info-checkbox">
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="contact"
+                      value="email"
+                      class="subscribe__info-checkbox__input"
+                    />
+
+                    <label for="agree" class="subscribe__info-checkbox__label"
+                      >Keep me signed in</label
+                    >
+                  </div>
+
+                  <span class="login__form-footer__text">Forgot password?</span>
+                </div>
+
+                <button class="modal__button">Sign in</button>
+              </form>
+            </div>
+
+            <div class="register__modal modal" data-modal="register__modal">
+              <h2 class="login__modal-title">Sign up</h2>
+              <p class="login__modal-descr">
+                Registration takes less than a minute but gives you full control
+                over your studying.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Full name</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your full name"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Confirm password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Repeat password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="subscribe__info-checkbox">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="contact"
+                    value="email"
+                    class="subscribe__info-checkbox__input"
+                  />
+
+                  <label for="agree" class="subscribe__info-checkbox__label"
+                    >Remember me</label
+                  >
+                </div>
+
+                <button class="modal__button">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="header__mobile"></div>
+
         <div class="header__container">
-          <div class="header__header">
-            <div class="header__header-left">
-              <picture class="header__logo-img__box">
-                <img
-                  src="./course/src/icons/logo.svg"
-                  alt="logo"
-                  class="header__logo-img"
-                />
-              </picture>
-              <nav class="header__menu">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="aboutUs.html" class="menu__item-link">About Us</a>
+          <div class="header__top">
+            <div class="header__top-left">
+              <img
+                src="./homepage/src/icons/logo.svg"
+                alt="logo"
+                class="header__top-left__img"
+              />
+              <nav class="header__top-left__menu">
+                <ul class="header__left-menu__list">
+                  <li class="header__menu-list__item">
+                    <a href="homepage.html" class="header__list-item__link"
+                      >Home</a
+                    >
                   </li>
-                  <li class="menu__item">
-                    <a href="courses.html" class="menu__item-link">Courses</a>
+                  <li class="header__menu-list__item">
+                    <a href="aboutUs.html" class="header__list-item__link"
+                      >About Us</a
+                    >
                   </li>
-                  <li class="menu__item">
-                    <a href="events.html" class="menu__item-link">Events</a>
+                  <li class="header__menu-list__item">
+                    <a href="courses.html" class="header__list-item__link"
+                      >Courses</a
+                    >
                   </li>
-                  <li class="menu__item">
-                    <a href="post.html" class="menu__item-link">Posts</a>
+                  <li class="header__menu-list__item">
+                    <a href="post.html" class="header__list-item__link"
+                      >Posts</a
+                    >
                   </li>
-                  <li class="menu__item">
-                    <a href="contacts.html" class="menu__item-link">Contacts</a>
+                  <li class="header__menu-list__item">
+                    <a href="events.html" class="header__list-item__link"
+                      >Events</a
+                    >
+                  </li>
+                  <li class="header__menu-list__item">
+                    <a href="contacts.html" class="header__list-item__link"
+                      >Contacts</a
+                    >
                   </li>
                 </ul>
               </nav>
             </div>
-            <div class="header__header-right">
-              <button class="header__header-right__button">
+
+            <div class="header__top-right">
+              <button class="header__top-right__button btn__homepage">
                 Get consultation
               </button>
-              <div class="header__header-right__login">
-                <picture class="header__login-img__box">
-                  <img
-                    src="./course/src/icons/profile.svg"
-                    alt="log in"
-                    class="header__login-img"
-                  />
-                </picture>
-                <div class="header__login-info__box">
-                  <span class="header__login-info__login">Log in</span>
-                  / <span class="header__login-info__register">Register</span>
+              <div class="header__top-right__login">
+                <img
+                  src="./homepage/src/icons/login.svg"
+                  alt="log in"
+                  class="header__right-login__img"
+                />
+                <div class="header__right-login__text">
+                  <span
+                    class="header__login-text__login header__button"
+                    data-path__modal="login__modal"
+                    >Log in</span
+                  >
+                  /
+                  <span
+                    class="header__login-text__register header__button"
+                    data-path__modal="register__modal"
+                    >Register</span
+                  >
                 </div>
               </div>
             </div>
-          </div>
-          <div class="header__body">
-            <span class="header__body-text">Course</span>
-            <h1 class="header__body-title">
-              User Experience. Principles of Human-Centered Design
-            </h1>
+
+            <div class="header__hamb">
+              <div class="header__hamb-field">
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
       <main id="main">
+        <section class="heading">
+          <div class="heading__container">
+            <span class="heading__text">Course</span>
+
+            <h1 class="heading__title">
+              User Experience. Principles of Human-Centered Design
+            </h1>
+          </div>
+        </section>
+
         <section class="about">
           <div class="about__container">
             <div class="about__left">
@@ -211,8 +363,8 @@
                 </p>
               </div>
 
-              <button class="about__right-button btn__course">
-                Join the course
+              <button class="about__right-button btn__course btn__homepage">
+                Join
               </button>
             </div>
           </div>
@@ -222,8 +374,8 @@
           <div class="curator__container">
             <picture class="curator__img-box">
               <img
-                src="./course/src/img/sad_1.jpg"
-                alt="image"
+                src="./course/src/img/men.jpg"
+                alt="men"
                 class="curator__img"
               />
             </picture>
@@ -428,7 +580,7 @@
                   />
                 </div>
               </div>
-              <button class="cta__body-button">Join the course</button>
+              <button class="cta__body-button btn__homepage">Join</button>
             </form>
           </div>
         </section>
@@ -934,6 +1086,7 @@
                 <div class="register__info-form__item">
                   <span class="register__form-item__name">Full Name</span>
                   <input
+                    required
                     type="text"
                     placeholder="Your full name"
                     class="register__form-item__input"
@@ -941,24 +1094,28 @@
                 </div>
 
                 <div class="register__info-form__item">
-                  <span class="register__form-item__name">Full Name</span>
+                  <span class="register__form-item__name">Email</span>
                   <input
-                    type="text"
-                    placeholder="Your full name"
+                    required
+                    type="email"
+                    placeholder="Your email"
                     class="register__form-item__input"
                   />
                 </div>
 
                 <div class="register__info-form__item">
-                  <span class="register__form-item__name">Full Name</span>
+                  <span class="register__form-item__name">Password</span>
                   <input
-                    type="text"
-                    placeholder="Your full name"
+                    required
+                    type="password"
+                    placeholder="Your password"
                     class="register__form-item__input"
                   />
                 </div>
+                <button class="register__info-button btn__homepage">
+                  Join
+                </button>
               </form>
-              <button class="register__info-button">Join the course</button>
             </div>
           </div>
         </section>
@@ -999,7 +1156,35 @@
                   <div class="relatedCourses__item-img__block">
                     <picture class="relatedCourses__item-img__box">
                       <img
-                        src="./course/src/img/girl_2.jpg"
+                        src="./course/src/img/code.jpg"
+                        alt="image"
+                        class="relatedCourses__item-img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="relatedCourses__item-info">
+                    <span class="relatedCourses__item-info__text"
+                      >Management</span
+                    >
+                    <h4 class="relatedCourses__item-info__title">
+                      Prduct Management Fundamentals
+                    </h4>
+                    <div class="relatedCourses__item-info__footer">
+                      <span class="relatedCourses__info-footer__price"
+                        >$480</span
+                      >
+                      <span class="relatedCourses__info-footer__name"
+                        >| by Marvin McKinney</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relatedCourses__item swiper-slide">
+                  <div class="relatedCourses__item-img__block">
+                    <picture class="relatedCourses__item-img__box">
+                      <img
+                        src="./course/src/img/code.jpg"
                         alt="image"
                         class="relatedCourses__item-img"
                       />
@@ -1027,7 +1212,7 @@
                   <div class="relatedCourses__item-img__block">
                     <picture class="relatedCourses__item-img__box">
                       <img
-                        src="./course/src/img/girl_2.jpg"
+                        src="./course/src/img/code.jpg"
                         alt="image"
                         class="relatedCourses__item-img"
                       />
@@ -1035,17 +1220,17 @@
                   </div>
                   <div class="relatedCourses__item-info">
                     <span class="relatedCourses__item-info__text"
-                      >Marketing</span
+                      >Management</span
                     >
                     <h4 class="relatedCourses__item-info__title">
-                      The Ultimate Google Ads Training Course
+                      Prduct Management Fundamentals
                     </h4>
                     <div class="relatedCourses__item-info__footer">
                       <span class="relatedCourses__info-footer__price"
-                        >$100</span
+                        >$480</span
                       >
                       <span class="relatedCourses__info-footer__name"
-                        >| by Jerome Bell</span
+                        >| by Marvin McKinney</span
                       >
                     </div>
                   </div>
@@ -1055,35 +1240,7 @@
                   <div class="relatedCourses__item-img__block">
                     <picture class="relatedCourses__item-img__box">
                       <img
-                        src="./course/src/img/girl_2.jpg"
-                        alt="image"
-                        class="relatedCourses__item-img"
-                      />
-                    </picture>
-                  </div>
-                  <div class="relatedCourses__item-info">
-                    <span class="relatedCourses__item-info__text"
-                      >Marketing</span
-                    >
-                    <h4 class="relatedCourses__item-info__title">
-                      The Ultimate Google Ads Training Course
-                    </h4>
-                    <div class="relatedCourses__item-info__footer">
-                      <span class="relatedCourses__info-footer__price"
-                        >$100</span
-                      >
-                      <span class="relatedCourses__info-footer__name"
-                        >| by Jerome Bell</span
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="relatedCourses__item swiper-slide">
-                  <div class="relatedCourses__item-img__block">
-                    <picture class="relatedCourses__item-img__box">
-                      <img
-                        src="./course/src/img/girl_2.jpg"
+                        src="./course/src/img/code.jpg"
                         alt="image"
                         class="relatedCourses__item-img"
                       />
@@ -1113,7 +1270,7 @@
               <span class="relatedCourses__footer-text"
                 >Do you want more courses?</span
               >
-              <button class="relatedCourses__footer-button">
+              <button class="relatedCourses__footer-button btn__homepage">
                 View all courses
               </button>
             </div>
@@ -1249,7 +1406,7 @@
               />
               by Createx Studio
             </p>
-            <span class="footer__footer-right">GO TO TOP</span>
+            <a class="footer__footer-right" href="#header">GO TO TOP</a>
           </div>
         </div>
       </footer>
