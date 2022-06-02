@@ -1,0 +1,106 @@
+#header {
+  .btn__homepage {
+    padding: 0px 40px;
+    min-height: 52px;
+    border: 1px solid #ff3f3a;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #ff4242;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+      color: #ffffff;
+    }
+  }
+
+  .header__container {
+    padding: 20px 0px 80px 0px;
+    .header__top {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      .header__top-left {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .header__top-left__img {
+          cursor: pointer;
+          margin-right: 60px;
+        }
+
+        .header__top-left__menu {
+          .header__left-menu__list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .header__menu-list__item {
+              &:not(:last-child) {
+                margin-right: 40px;
+              }
+              .header__list-item__link {
+                font-family: "Lato";
+                font-weight: 500;
+                font-size: 16px;
+                text-align: center;
+                color: var(--top-primary-color);
+                cursor: pointer;
+                transition: color 0.2s;
+                &:hover {
+                  color: #ff3f3a;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header__top-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .header__top-right__button {
+          margin-right: 36px;
+        }
+
+        .header__top-right__login {
+          display: flex;
+          align-items: center;
+          .header__right-login__img {
+            margin-right: 8px;
+          }
+          .header__right-login__text {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--top-primary-color);
+            text-align: center;
+            .header__login-text__login {
+              cursor: pointer;
+              margin-right: 4px;
+              transition: color 0.2s;
+              &:hover {
+                color: #ff4242;
+              }
+            }
+            .header__login-text__register {
+              margin-left: 4px;
+              transition: color 0.2s;
+              cursor: pointer;
+              &:hover {
+                color: #ff4242;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

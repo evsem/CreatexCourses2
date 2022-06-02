@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./homepage/style/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:regular,700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./homepage/homepage.js" defer></script>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header">
+        <section class="modals">
+          <div class="modals__wrapper">
+            <div class="login__modal modal" data-modal="login__modal">
+              <h2 class="login__modal-title">Sign in</h2>
+              <p class="login__modal-descr">
+                Sign in to your account using email and password provided during
+                registration.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="login__modal-form__footer">
+                  <div class="subscribe__info-checkbox">
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="contact"
+                      value="email"
+                      class="subscribe__info-checkbox__input"
+                    />
+
+                    <label for="agree" class="subscribe__info-checkbox__label"
+                      >Keep me signed in</label
+                    >
+                  </div>
+
+                  <span class="login__form-footer__text">Forgot password?</span>
+                </div>
+
+                <button class="modal__button">Sign in</button>
+              </form>
+            </div>
+
+            <div class="register__modal modal" data-modal="register__modal">
+              <h2 class="login__modal-title">Sign up</h2>
+              <p class="login__modal-descr">
+                Registration takes less than a minute but gives you full control
+                over your studying.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Full name</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your full name"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Confirm password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Repeat password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="subscribe__info-checkbox">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="contact"
+                    value="email"
+                    class="subscribe__info-checkbox__input"
+                  />
+
+                  <label for="agree" class="subscribe__info-checkbox__label"
+                    >Remember me</label
+                  >
+                </div>
+
+                <button class="modal__button">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="header__mobile"></div>
+
+        <div class="header__container">
+          <div class="header__top">
+            <div class="header__top-left">
+              <img
+                src="./homepage/src/icons/logo.svg"
+                alt="logo"
+                class="header__top-left__img"
+              />
+              <nav class="header__top-left__menu">
+                <ul class="header__left-menu__list">
+                  <li class="header__menu-list__item">
+                    <a href="aboutUs.html" class="header__list-item__link"
+                      >About Us</a
+                    >
+                  </li>
+                  <li class="header__menu-list__item">
+                    <a href="courses.html" class="header__list-item__link"
+                      >Courses</a
+                    >
+                  </li>
+                  <li class="header__menu-list__item">
+                    <a href="events.html" class="header__list-item__link"
+                      >Events</a
+                    >
+                  </li>
+                  <li class="header__menu-list__item">
+                    <a href="post.html" class="header__list-item__link"
+                      >Posts</a
+                    >
+                  </li>
+                  <li class="header__menu-list__item">
+                    <a href="contacts.html" class="header__list-item__link"
+                      >Contacts</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header__top-right">
+              <button class="header__top-right__button btn__homepage">
+                Get consultation
+              </button>
+              <div class="header__top-right__login">
+                <img
+                  src="./homepage/src/icons/login.svg"
+                  alt="log in"
+                  class="header__right-login__img"
+                />
+                <div class="header__right-login__text">
+                  <span
+                    class="header__login-text__login header__button"
+                    data-path__modal="login__modal"
+                    >Log in</span
+                  >
+                  /
+                  <span
+                    class="header__login-text__register header__button"
+                    data-path__modal="register__modal"
+                    >Register</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="header__hamb">
+              <div class="header__hamb-field">
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__center">
+            <div class="header__center-left">
+              <h1 class="header__center-left__title">
+                Enjoy studying with Createx Online Courses
+              </h1>
+              <div class="header__center-left__buttons">
+                <button class="header__button-button__left btn__homepage">
+                  About us
+                </button>
+                <button class="header__button-right__button btn__homepage">
+                  Explore courses
+                </button>
+              </div>
+            </div>
+            <div class="header__center-right">
+              <img
+                src="./homepage/src/img/mainHeader.jpg"
+                alt="image"
+                class="header__center-right__img"
+              />
+            </div>
+          </div>
+
+          <div class="header__bottom">
+            <ul class="header__bottom-statistics">
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">1200</span>
+                <span class="header__statisrics-item__text"
+                  >Students graduated</span
+                >
+              </li>
+
+              <div class="header__bottom-statistics__circle"></div>
+
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">84</span>
+                <span class="header__statisrics-item__text"
+                  >Completed courses</span
+                >
+              </li>
+
+              <div class="header__bottom-statistics__circle"></div>
+
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">16</span>
+                <span class="header__statisrics-item__text"
+                  >Qualified tutors</span
+                >
+              </li>
+
+              <div class="header__bottom-statistics__circle"></div>
+
+              <li class="header__bottom-statistics__item">
+                <span class="header__statistics-item__number">4</span>
+                <span class="header__statisrics-item__text"
+                  >Years of experience</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="about">
+          <div class="about__container">
+            <div class="about__img-box">
+              <img
+                src="./homepage/src/img/life_1.jpg"
+                alt="image"
+                class="about__img"
+              />
+            </div>
+
+            <div class="about__info">
+              <h2 class="about__info-title">Why Createx?</h2>
+              <ul class="about__info-list">
+                <li class="about__info-list__item">
+                  <img
+                    src="./homepage/src/icons/list-item.svg"
+                    alt="icon"
+                    class="about__list-item-img"
+                  />
+                  <p class="about__list-item-descr">
+                    A fermentum in morbi pretium aliquam adipiscing donec
+                    tempus.
+                  </p>
+                </li>
+                <li class="about__info-list__item">
+                  <div class="about__list-item-imgBox">
+                    <img
+                      src="./homepage/src/icons/list-item.svg"
+                      alt="icon"
+                      class="about__list-item-img"
+                    />
+                  </div>
+                  <p class="about__list-item-descr">
+                    Vulputate placerat amet pulvinar lorem nisl.
+                  </p>
+                </li>
+                <li class="about__info-list__item">
+                  <div class="about__list-item-imgBox">
+                    <img
+                      src="./homepage/src/icons/list-item.svg"
+                      alt="icon"
+                      class="about__list-item-img"
+                    />
+                  </div>
+                  <p class="about__list-item-descr">
+                    Consequat feugiat habitant gravida quisque elit bibendum id
+                    adipiscing sed.
+                  </p>
+                </li>
+                <li class="about__info-list__item">
+                  <div class="about__list-item-imgBox">
+                    <img
+                      src="./homepage/src/icons/list-item.svg"
+                      alt="icon"
+                      class="about__list-item-img"
+                    />
+                  </div>
+                  <p class="about__list-item-descr">
+                    Etiam duis lobortis in fames ultrices commodo nibh.
+                  </p>
+                </li>
+                <li class="about__info-list__item">
+                  <div class="about__list-item-imgBox">
+                    <img
+                      src="./homepage/src/icons/list-item.svg"
+                      alt="icon"
+                      class="about__list-item-img"
+                    />
+                  </div>
+                  <p class="about__list-item-descr">
+                    Tincidunt sagittis neque sem ac eget.
+                  </p>
+                </li>
+                <li class="about__info-list__item">
+                  <div class="about__list-item-imgBox">
+                    <img
+                      src="./homepage/src/icons/list-item.svg"
+                      alt="icon"
+                      class="about__list-item-img"
+                    />
+                  </div>
+                  <p class="about__list-item-descr">
+                    Ultricies amet justo et eget quisque purus vulputate dapibus
+                    tortor.
+                  </p>
+                </li>
+              </ul>
+              <button class="about__info-button btn__homepage">
+                More about us
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="courses">
+          <div class="courses__container">
+            <div class="courses__header">
+              <span class="courses__header-text">Ready to learn?</span>
+              <div class="courses__header-bottom">
+                <h2 class="courses__header-bottom__title">Featured Courses</h2>
+                <button class="courses__header-bottom-button btn__homepage">
+                  View all courses
+                </button>
+              </div>
+            </div>
+
+            <div class="courses__cards">
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction"
+                    >Marketing</span
+                  >
+                  <h4 class="courses__item-content__title">
+                    The Ultimate Google Ads Training Course
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$100</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Jerome Bell</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction"
+                    >HR & Recruting</span
+                  >
+                  <h4 class="courses__item-content__title">
+                    HR Management and Analytics
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$200</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Leslie Alexander Li</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction"
+                    >Management</span
+                  >
+                  <h4 class="courses__item-content__title">
+                    Product Management Fundamentals
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$480</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Marvin McKinney</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction"
+                    >Marketing</span
+                  >
+                  <h4 class="courses__item-content__title">
+                    Brand Management & PR Communications
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$580</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Kristin Watson</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction"
+                    >Management</span
+                  >
+                  <h4 class="courses__item-content__title">
+                    Business Development Management
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$400</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Dianne Russell</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="courses__cards-item">
+                <div class="courses__item-img__box">
+                  <img
+                    src="./homepage/src/img/girl_2.jpg"
+                    alt="image"
+                    class="courses__item-img"
+                  />
+                </div>
+                <div class="courses__item-content">
+                  <span class="courses__item-content__direction">Design</span>
+                  <h4 class="courses__item-content__title">
+                    Graphic Design Basic
+                  </h4>
+                  <div class="courses__item-content__info">
+                    <span class="courses__content-info__price">$400</span>
+                    <div class="courses__content-info__vertical"></div>
+                    <span class="courses__content-info__name"
+                      >by Guy Hawkins</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits">
+          <div class="benefits__container">
+            <div class="benefits__header">
+              <span class="benefits__header-text">Our benefits</span>
+              <h2 class="benefits__header-title">That’s how we do it</h2>
+            </div>
+            <div class="benefits__body">
+              <div class="benefits__body-bar">
+                <div class="benefits__body-bar__item">
+                  <div class="benefits__item-img__box">
+                    <img
+                      src="./homepage/src/icons/like.svg"
+                      alt="like"
+                      class="benefits__item-img"
+                    />
+                  </div>
+                  <span class="benefits__item-text">Feedback & Support</span>
+                </div>
+
+                <div class="benefits__body-bar__item">
+                  <div class="benefits__item-img__box">
+                    <img
+                      src="./homepage/src/icons/library.svg"
+                      alt="library"
+                      class="benefits__item-img"
+                    />
+                  </div>
+                  <span class="benefits__item-text">24/7 Online Library</span>
+                </div>
+
+                <div class="benefits__body-bar__item">
+                  <div class="benefits__item-img__box">
+                    <img
+                      src="./homepage/src/icons/chat.svg"
+                      alt="chat"
+                      class="benefits__item-img"
+                    />
+                  </div>
+                  <span class="benefits__item-text">Community</span>
+                </div>
+              </div>
+              <div class="benefits__body-info">
+                <div class="benefits__body-info__content">
+                  <h3 class="benefits__info__content__title">
+                    Only practicing tutors
+                  </h3>
+                  <p class="benefits__info__content__descr">
+                    Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non
+                    fames dictum suspendisse. Morbi mauris cras massa ut dolor
+                    quis sociis mollis augue. Nunc, sodales tortor sit diam mi
+                    amet massa. Fermentum diam diam sociis vestibulum. Nulla
+                    nisl accumsan, id dignissim massa ut amet. Amet enim, nisi
+                    tempus vehicula.
+                  </p>
+                </div>
+                <div class="benefits__info-img__box">
+                  <img
+                    src="./homepage/src/img/benefits.jpg"
+                    alt="image"
+                    class="benefits__info-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="events">
+          <div class="events__container">
+            <div class="events__header">
+              <span class="events__header-text">Our Events</span>
+              <h2 class="events__header-title">Lectures & workshops</h2>
+            </div>
+            <div class="events__cards">
+              <div class="events__cards-item">
+                <div class="events__cards-item__content">
+                  <div class="events__item-content__left">
+                    <span class="events__content-left__number">05</span>
+                    <div class="events__content-left__info">
+                      <span class="events__left-info__month">August</span>
+                      <span class="events__left-info__time">11:00 - 14:00</span>
+                    </div>
+                  </div>
+
+                  <div class="events__item-content__right">
+                    <p class="events__content-right__descr">
+                      Formation of the organizational structure of the company
+                      in the face of uncertainty.
+                    </p>
+                    <span class="events__content-right__online"
+                      >Onine master-class</span
+                    >
+                  </div>
+                </div>
+
+                <button class="events__cards-item__button btn__homepage">
+                  Viev more
+                </button>
+              </div>
+
+              <div class="events__cards-item">
+                <div class="events__cards-item__content">
+                  <div class="events__item-content__left">
+                    <span class="events__content-left__number">24</span>
+                    <div class="events__content-left__info">
+                      <span class="events__left-info__month">July</span>
+                      <span class="events__left-info__time">11:00 - 12:30</span>
+                    </div>
+                  </div>
+                  <div class="events__item-content__right">
+                    <p class="events__content-right__descr">
+                      Building a customer service department. Best Practices.
+                    </p>
+                    <span class="events__content-right__online"
+                      >Onine lecture</span
+                    >
+                  </div>
+                </div>
+
+                <button class="events__cards-item__button btn__homepage">
+                  Viev more
+                </button>
+              </div>
+
+              <div class="events__cards-item">
+                <div class="events__cards-item__content">
+                  <div class="events__item-content__left">
+                    <span class="events__content-left__number">16</span>
+                    <div class="events__content-left__info">
+                      <span class="events__left-info__month">July</span>
+                      <span class="events__left-info__time">10:00 - 13:00</span>
+                    </div>
+                  </div>
+                  <div class="events__item-content__right">
+                    <p class="events__content-right__descr">
+                      How to apply methods of speculative design in practice.
+                      Worldbuilding prototyping.
+                    </p>
+                    <span class="events__content-right__online"
+                      >Onine workshop</span
+                    >
+                  </div>
+                </div>
+
+                <button class="events__cards-item__button btn__homepage">
+                  Viev more
+                </button>
+              </div>
+            </div>
+            <div class="events__footer">
+              <span class="events__footer-text">Do you want more?</span>
+              <button class="events__footer-button btn__homepage">
+                Explore all events
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="sertificate">
+          <div class="sertificate__container">
+            <div class="sertificate__left">
+              <span class="sertificate__left-text">Createx Certificate</span>
+              <h2 class="sertificate__left-title">
+                Your expertise will be confirmed
+              </h2>
+            </div>
+            <div class="sertificate__right-img__box">
+              <img
+                src="./homepage/src/img/life_1.jpg"
+                alt="sertificate"
+                class="sertificate__right-img"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="team">
+          <div class="team__container">
+            <div class="team__header">
+              <div class="team__header-left">
+                <span class="team__header-left__text"
+                  >Best tutors are all here</span
+                >
+                <h2 class="team__header-left__title">Meet our team</h2>
+              </div>
+
+              <div class="team__header-right__images">
+                <img
+                  src="./homepage/src/icons/arrowTeamLeft.svg"
+                  alt="arrow"
+                  class="team__right-images__img"
+                />
+                <img
+                  src="./homepage/src/icons/arrowTeamRight.svg"
+                  alt="arrow"
+                  class="team__right-images__img"
+                />
+              </div>
+            </div>
+
+            <div class="team__cards">
+              <div class="team__cards-card">
+                <div class="team__card-img__box">
+                  <img
+                    src="./homepage/src/img/code.jpg"
+                    alt="girl"
+                    class="team__card-img"
+                  />
+                </div>
+                <div class="team__cards-card__content">
+                  <span class="team__card-content__name">Dianne Russell</span>
+                  <span class="team__card-content__position"
+                    >Founder and CEO</span
+                  >
+                </div>
+              </div>
+
+              <div class="team__cards-card">
+                <div class="team__card-img__box">
+                  <img
+                    src="./homepage/src/img/code.jpg"
+                    alt="girl"
+                    class="team__card-img"
+                  />
+                </div>
+                <div class="team__cards-card__content">
+                  <span class="team__card-content__name">Jerome Bell</span>
+                  <span class="team__card-content__position"
+                    >Founder and Program Director</span
+                  >
+                </div>
+              </div>
+
+              <div class="team__cards-card">
+                <div class="team__card-img__box">
+                  <img
+                    src="./homepage/src/img/code.jpg"
+                    alt="girl"
+                    class="team__card-img"
+                  />
+                </div>
+                <div class="team__cards-card__content">
+                  <span class="team__card-content__name">Kristin Watson</span>
+                  <span class="team__card-content__position"
+                    >Marketer, Curator of Marketing Course</span
+                  >
+                </div>
+              </div>
+
+              <div class="team__cards-card">
+                <div class="team__card-img__box">
+                  <img
+                    src="./homepage/src/img/code.jpg"
+                    alt="girl"
+                    class="team__card-img"
+                  />
+                </div>
+                <div class="team__cards-card__content">
+                  <span class="team__card-content__name">Marvin McKinney</span>
+                  <span class="team__card-content__position"
+                    >PM, Curator of Management Course</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <div class="testimonials__uniqcontainer">
+            <div class="testimonials__header">
+              <span class="testimonials__header-text">TESTIMONIALS</span>
+              <h2 class="testimonials__header-title">What our students say</h2>
+            </div>
+            <div class="testimonials__body">
+              <picture class="testimonials__body-leftArrow__box">
+                <img
+                  src="./aboutUs/src/icons/arrowLeft.svg"
+                  alt="arrow"
+                  class="testimonials__body-leftArrow swiper-button-prev"
+                />
+              </picture>
+
+              <div class="testimonials__box swiper-container">
+                <div class="testimonials__wrapper swiper-wrapper">
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name"
+                            >Eleanor Pena</span
+                          >
+                          <span class="testimonials__item-info__position"
+                            >Position, Course</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name"
+                            >Eleanor Pena</span
+                          >
+                          <span class="testimonials__item-info__position"
+                            >Position, Course</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name"
+                            >Eleanor Pena</span
+                          >
+                          <span class="testimonials__item-info__position"
+                            >Position, Course</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name"
+                            >Eleanor Pena</span
+                          >
+                          <span class="testimonials__item-info__position"
+                            >Position, Course</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonials__item swiper-slide">
+                    <picture class="testimonials__item-left">
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                      <img
+                        src="./aboutUs/src/icons/forSwiper.svg"
+                        alt="image"
+                        class="testimonials__item-img"
+                      />
+                    </picture>
+                    <div class="testimonials__item-content">
+                      <p class="testimonials__item-content__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                      <div class="testimonials__item-content__personal">
+                        <div class="testimonials__item-ava__box"></div>
+                        <div class="testimonials__item-info">
+                          <span class="testimonials__item-info__name"
+                            >Eleanor Pena</span
+                          >
+                          <span class="testimonials__item-info__position"
+                            >Position, Course</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <picture class="testimonials__body-rightArrow__box">
+                <img
+                  src="./aboutUs/src/icons/arrowRight.svg"
+                  alt="arrow"
+                  class="testimonials__body-rightArrow swiper-button-next"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="blog">
+          <div class="blog__container">
+            <div class="blog__header">
+              <div class="blog__header-left">
+                <span class="blog__header-left__text">Our blog</span>
+                <h2 class="blog__header-left__title">Latest post</h2>
+              </div>
+              <button class="blog__header-button btn__homepage">
+                Go to blog
+              </button>
+            </div>
+            <div class="blog__body">
+              <div class="blog__body-post">
+                <div class="blog__post-img__box">
+                  <img
+                    src="./homepage/src/img/leftPost.jpg"
+                    alt="image"
+                    class="blog__body-img"
+                  />
+                  <div class="blog__body-img__descr">
+                    <div class="blog__descr-img__box">
+                      <img
+                        src="./homepage/src/icons/mic.svg"
+                        alt="icon"
+                        class="blog__descr-img"
+                      />
+                    </div>
+                    <span class="blog__descr-img__name">Podcast</span>
+                  </div>
+                </div>
+
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Marketing</span>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__data">
+                      <img
+                        src="./homepage/src/icons/calendar.svg"
+                        alt="icon"
+                        class="blog__data-img"
+                      />
+                      <span class="blog__data-date">September 4, 2020</span>
+                    </div>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__time">
+                      <img
+                        src="./homepage/src/icons/clock.svg"
+                        alt="icon"
+                        class="blog__time-img"
+                      />
+                      <span class="blog__time-time">36 min</span>
+                    </div>
+                  </div>
+
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      What is traffic arbitrage and does it really make money?
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      Pharetra, ullamcorper iaculis viverra parturient sed id
+                      sed. Convallis proin dignissim lacus, purus gravida...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Listen</span>
+                      <div class="blog__click-img__box">
+                        <img
+                          src="./homepage/src/icons/arrowRightOrange.svg"
+                          alt="arrow"
+                          class="blog__click-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog__body-post">
+                <div class="blog__post-img__box">
+                  <img
+                    src="./homepage/src/img/centerPost.jpg"
+                    alt="image"
+                    class="blog__body-img"
+                  />
+                  <div class="blog__body-img__descr">
+                    <div class="blog__descr-img__box">
+                      <img
+                        src="./homepage/src/icons/play.svg"
+                        alt="icon"
+                        class="blog__descr-img"
+                      />
+                    </div>
+                    <span class="blog__descr-img__name">Video</span>
+                  </div>
+                </div>
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Management</span>
+
+                    <span class="blog__content-top__vertical"></span>
+
+                    <div class="blog__content-top__data">
+                      <img
+                        src="./homepage/src/icons/calendar.svg"
+                        alt="icon"
+                        class="blog__data-img"
+                      />
+                      <span class="blog__data-date">August 25, 2020</span>
+                    </div>
+
+                    <span class="blog__content-top__vertical"></span>
+
+                    <div class="blog__content-top__time">
+                      <img
+                        src="./homepage/src/icons/clock.svg"
+                        alt="icon"
+                        class="blog__time-img"
+                      />
+                      <span class="blog__time-time">45 min</span>
+                    </div>
+                  </div>
+
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      What to do and who to talk to if you want to get feedback
+                      on the product
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      Neque a, senectus consectetur odio in aliquet nec eu.
+                      Ultricies ac nibh urna urna sagittis faucibus...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Watch</span>
+                      <div class="blog__click-img__box">
+                        <img
+                          src="./homepage/src/icons/arrowRightOrange.svg"
+                          alt="arrow"
+                          class="blog__click-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog__body-post">
+                <div class="blog__post-img__box">
+                  <img
+                    src="./homepage/src/img/rightPost.jpg"
+                    alt="image"
+                    class="blog__body-img"
+                  />
+                  <div class="blog__body-img__descr">
+                    <div class="blog__descr-img__box">
+                      <img
+                        src="./homepage/src/icons/files.svg"
+                        alt="icon"
+                        class="blog__descr-img"
+                      />
+                    </div>
+                    <span class="blog__descr-img__name">Article</span>
+                  </div>
+                </div>
+                <div class="blog__post-content">
+                  <div class="blog__post-content__top">
+                    <span class="blog__content-top__course">Design</span>
+                    <span class="blog__content-top__vertical"></span>
+                    <div class="blog__content-top__data">
+                      <img
+                        src="./homepage/src/icons/calendar.svg"
+                        alt="icon"
+                        class="blog__data-img"
+                      />
+                      <span class="blog__data-date">August 8, 2020</span>
+                    </div>
+                  </div>
+                  <div class="blog__post-content__info">
+                    <h4 class="blog__content-info__title">
+                      Should you choose a creative profession if you are
+                      attracted to creativity?
+                    </h4>
+                    <p class="blog__content-info__descr">
+                      Curabitur nisl tincidunt eros venenatis vestibulum ac
+                      placerat. Tortor, viverra sed vulputate ultrices...
+                    </p>
+                    <div class="blog__content-info__click">
+                      <span class="blog__info-click__text">Read</span>
+                      <div class="blog__click-img__box">
+                        <img
+                          src="./homepage/src/icons/arrowRightOrange.svg"
+                          alt="arrow"
+                          class="blog__click-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subscribe">
+          <div class="subscribe__container">
+            <div class="subscribe__center">
+              <span class="subscribe__center-text">Don’t miss anything</span>
+              <h2 class="subscribe__center-title">
+                Subscribe to the Createx School announcements
+              </h2>
+              <form class="subscribe__center-form">
+                <input
+                  type="email"
+                  placeholder="Your working email"
+                  class="subscribe__center-form__input"
+                />
+                <button
+                  class="subscribe__center-form__button btn__homepage"
+                  type="reset"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer__body">
+          <div class="footer__container">
+            <div class="footer__body-left">
+              <div class="footer__left-img__box">
+                <img
+                  src="./homepage/src/icons/footer/logo.svg"
+                  alt="logo"
+                  class="footer__left-img"
+                />
+              </div>
+              <p class="footer__left-descr">
+                Createx Online School is a leader in online studying. We have
+                lots of courses and programs from the main market experts.
+                We provide relevant approaches to online learning, internships
+                and employment in the largest companies in the country.
+              </p>
+              <div class="footer__left-socials">
+                <div class="footer__socials-img__box">
+                  <img
+                    src="./homepage/src/icons/footer/facebook.svg"
+                    alt="facebook"
+                    class="footer__socials-img"
+                  />
+                </div>
+
+                <div class="footer__socials-img__box">
+                  <img
+                    src="./homepage/src/icons/footer/telegram.svg"
+                    alt="telegram"
+                    class="footer__socials-img"
+                  />
+                </div>
+
+                <div class="footer__socials-img__box">
+                  <img
+                    src="./homepage/src/icons/footer/twitter.svg"
+                    alt="twitter"
+                    class="footer__socials-img"
+                  />
+                </div>
+
+                <div class="footer__socials-img__box">
+                  <img
+                    src="./homepage/src/icons/footer/insta.svg"
+                    alt="insta"
+                    class="footer__socials-img"
+                  />
+                </div>
+
+                <div class="footer__socials-img__box">
+                  <img
+                    src="./homepage/src/icons/footer/linkedIn.svg"
+                    alt="linkedIn"
+                    class="footer__socials-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <ul class="footer__body-list">
+              <span class="footer__body-list__title">Site map</span>
+              <li class="footer__body-list__item">About Us</li>
+              <li class="footer__body-list__item">Courses</li>
+              <li class="footer__body-list__item">Events</li>
+              <li class="footer__body-list__item">Blog</li>
+              <li class="footer__body-list__item">Contacts</li>
+            </ul>
+
+            <ul class="footer__body-list">
+              <span class="footer__body-list__title">Courses</span>
+              <li class="footer__body-list__item">Marketing</li>
+              <li class="footer__body-list__item">Management</li>
+              <li class="footer__body-list__item">HR & Recruting</li>
+              <li class="footer__body-list__item">Design</li>
+              <li class="footer__body-list__item">Development</li>
+            </ul>
+
+            <div class="footer__body-contact">
+              <span class="footer__body-contact__title">Contact us</span>
+
+              <div class="footer__body-contact__item">
+                <img
+                  src="./homepage/src/icons/footer/phone.svg"
+                  alt="phone"
+                  class="footer__contact-img"
+                />
+                <span class="footer-contact__text">(405) 555-0128</span>
+              </div>
+
+              <div class="footer__body-contact__item">
+                <img
+                  src="./homepage/src/icons/footer/mail.svg"
+                  alt="mail"
+                  class="footer__contact-img"
+                />
+                <span class="footer-contact__text">hello@createx.com</span>
+              </div>
+            </div>
+
+            <div class="footer__body-newsletter">
+              <span class="footer__body-newsletter__title"
+                >SIGN UP TO OUR NEWSLETTER</span
+              >
+              <input
+                type="email"
+                placeholder="Email address"
+                class="footer__body-newsletter__input"
+              />
+              <p class="footer__body-newsletter__warning">
+                *Subscribe to our newsletter to receive communications and early
+                updates from Createx SEO Agency.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__footer">
+          <div class="footer__container">
+            <p class="footer__footer-left">
+              © All rights reserved. Made with
+              <img
+                src="./homepage/src/icons/footer/heart.svg"
+                alt="heart"
+                class="footer__footer-left__img"
+              />
+              by Createx Studio
+            </p>
+            <a class="footer__footer-right" href="#header">GO TO TOP</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./homepage.js"></script>
+  </body>
+</html>

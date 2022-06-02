@@ -1,0 +1,107 @@
+#header {
+  .header__container {
+    padding: 20px 0px 120px 0px;
+    .header__header {
+      margin-bottom: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header__header-left {
+        display: flex;
+        align-items: center;
+        .header__logo-img__box {
+          margin-right: 60px;
+          .header__logo-img {
+            cursor: pointer;
+          }
+        }
+
+        .header__menu {
+          .menu__list {
+            display: flex;
+            align-items: center;
+            .menu__item {
+              &:not(:last-child) {
+                margin-right: 40px;
+              }
+              .menu__item-link {
+                font-family: 'Lato';
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                color: #424551;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      .header__header-right {
+        display: flex;
+        align-items: center;
+        .header__header-right__button {
+          padding: 0px 40px;
+          margin-right: 36px;
+          min-height: 52px;
+          border: none;
+          border-radius: 4px;
+          background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+          font-family: 'Lato';
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          color: #ffffff;
+          cursor: pointer;
+        }
+
+        .header__header-right__login {
+          display: flex;
+          align-items: center;
+          .header__login-img__box {
+            margin-right: 8px;
+            .header__login-img {
+            }
+          }
+          .header__login-info__box {
+            display: flex;
+            align-items: center;
+            font-family: 'Lato';
+            font-weight: 700;
+            font-size: 16px;
+            color: #424551;
+            text-align: center;
+            .header__login-info__login {
+              cursor: pointer;
+            }
+            .header__login-info__register {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .header__body {
+      .header__body-text {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #ff3f3a;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+      .header__body-title {
+        max-width: 1020px;
+        margin: 0 auto;
+        font-family: 'Lato';
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        text-align: center;
+        color: #1e212c;
+      }
+    }
+  }
+}

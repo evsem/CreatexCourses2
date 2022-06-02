@@ -1,0 +1,420 @@
+#main {
+  .btn__homepage {
+    padding: 0px 40px;
+    min-height: 52px;
+    border: 1px solid #ff3f3a;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #ff4242;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+      color: #ffffff;
+    }
+  }
+  font-family: "Lato";
+
+  .titles {
+    color: #1e212c;
+    margin-bottom: 60px;
+    .titles__text {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .titles__title {
+      font-weight: 900;
+      font-size: 46px;
+      text-align: center;
+    }
+  }
+
+  .courses {
+    padding-bottom: 120px;
+    .courses__container {
+      .courses__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        .courses__header-tabs {
+          display: flex;
+          align-items: center;
+          color: #9a9ca5;
+          .courses__header-tabs__item {
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: color 0.1s linear;
+            &:not(:last-child) {
+              margin-right: 52px;
+            }
+            &:hover {
+              color: #ff3f3a;
+            }
+            .courses__tabs-item__value {
+              font-weight: 900;
+              font-size: 10px;
+              text-align: center;
+              margin-left: 4px;
+            }
+          }
+        }
+        .courses__header-search {
+          padding: 11px 16px;
+          min-width: 315px;
+          min-height: 44px;
+          background-color: #ffffff;
+          border: 1px solid #d7dadd;
+          border-radius: 4px;
+          font-weight: 400;
+          font-size: 14px;
+          color: #9a9ca5;
+          outline: none;
+        }
+      }
+
+      .courses__body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        .courses__body-item {
+          width: 370px;
+          background-color: #ffffff;
+          margin: 0px 15px 30px 15px;
+          cursor: pointer;
+          .courses__item-header {
+            min-width: 100%;
+            max-height: 240px;
+            overflow: hidden;
+            border: none;
+            border-radius: 4px 4px 0px 0px;
+            .courses__item-header__img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .courses__item-content {
+            min-height: 198px;
+            border: 1px solid #e5e8ed;
+            border-radius: 0px 0px 4px 4px;
+            padding: 24px;
+            .courses__item-content__chapter {
+              display: inline-block;
+              padding: 2px 8px;
+              border: 1px solid #1e212c;
+              border-radius: 4px;
+              margin-bottom: 20px;
+              .courses__content-chapter__text {
+                font-weight: 400;
+                font-size: 14px;
+                text-align: center;
+                color: #1e212c;
+              }
+            }
+
+            .courses__item-content__title {
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 150%;
+              color: #1e212c;
+              margin-bottom: 20px;
+            }
+            .backcolor {
+              background-color: #ecec72;
+            }
+            .courses__item-content__info {
+              display: flex;
+              align-items: center;
+              .courses__content-info__price {
+                font-weight: 700;
+                font-size: 18px;
+                color: #ff4242;
+              }
+              .courses__content-info__vertical {
+                height: 16px;
+                width: 1.5px;
+                background-color: #787a80;
+                margin: 0px 8px;
+              }
+              .courses__content-info__author {
+                font-weight: 400;
+                font-size: 18px;
+                color: #787a80;
+              }
+            }
+          }
+        }
+      }
+
+      .courses__footer {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .courses__footer-img {
+          cursor: pointer;
+          margin-right: 16px;
+          transition: all 0.2s;
+          &:hover {
+            transform: rotate(0deg, 360deg);
+          }
+        }
+
+        .courses__footer-text {
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 16px;
+          color: #424551;
+        }
+      }
+    }
+  }
+
+  .sertificate {
+    margin-bottom: 80px;
+    .sertificate__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .sertificate__content {
+        max-width: 397px;
+        bottom: 60px;
+        .sertificate__content-text {
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #1e212c;
+          margin-bottom: 8px;
+        }
+        .sertificate__content-title {
+          font-weight: 900;
+          font-size: 46px;
+          line-height: 130%;
+          color: #1e212c;
+          margin-bottom: 48px;
+        }
+      }
+
+      .sertificate__img-box {
+        max-width: 733px;
+        max-height: 511px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 4px;
+        .sertificate__img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    background: #f4f5f7;
+    .testimonials__uniqcontainer {
+      padding: 80px 5px 180px 5px;
+      margin: 0 auto;
+      width: 1252px;
+      .testimonials__header {
+        margin-bottom: 60px;
+        .testimonials__header-text {
+          font-family: "Lato";
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #1e212c;
+          margin-bottom: 8px;
+        }
+        .testimonials__header-title {
+          font-family: "Lato";
+          font-weight: 900;
+          font-size: 46px;
+          text-align: center;
+          color: #1e212c;
+        }
+      }
+
+      .testimonials__body {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        min-width: 0;
+        width: 100%;
+        .swiper-button-next,
+        .swiper-button-prev {
+          position: none;
+        }
+        .testimonials__body-leftArrow__box {
+          .testimonials__body-leftArrow {
+          }
+        }
+        .testimonials__box {
+          max-width: 1020px;
+          overflow: hidden;
+          .testimonials__wrapper {
+            max-width: 1020px;
+            .testimonials__item {
+              padding: 64px 105px;
+              max-width: 1020px;
+              background-color: #fff;
+              display: flex;
+              align-items: flex-start;
+              .testimonials__item-left {
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                .testimonials__item-img {
+                  &:not(:last-child) {
+                    margin-right: 8px;
+                  }
+                }
+              }
+
+              .testimonials__item-content {
+                .testimonials__item-content__descr {
+                  font-family: "Lato";
+                  font-weight: 400;
+                  font-size: 20px;
+                  line-height: 150%;
+                  color: #424551;
+                  margin-bottom: 24px;
+                }
+
+                .testimonials__item-content__personal {
+                  display: flex;
+                  align-items: center;
+                  .testimonials__item-ava__box {
+                    width: 72px;
+                    height: 72px;
+                    background-color: #ecec72;
+                    border: none;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 20px;
+                    .testimonials__item-ava {
+                      width: 90px;
+                      height: 90px;
+                    }
+                  }
+
+                  .testimonials__item-info {
+                    .testimonials__item-info__name {
+                      font-family: "Lato";
+                      font-weight: 700;
+                      font-size: 16px;
+                      color: #1e212c;
+                      margin-bottom: 4px;
+                    }
+                    .testimonials__item-info__position {
+                      font-family: "Lato";
+                      font-weight: 400;
+                      font-size: 14px;
+                      color: #787a80;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .testimonials__body-rightArrow__box {
+          .testimonials__body-rightArrow {
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    .subscribe__container {
+      padding-top: 120px;
+      min-height: 564px;
+
+      .subscribe__center {
+        margin: 0px 0px 180px 0px;
+        min-width: 810px;
+        .subscribe__center-text {
+          font-family: "Lato";
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #1e212c;
+          margin-bottom: 8px;
+        }
+        .subscribe__center-title {
+          margin: 0 auto;
+          max-width: 810px;
+          font-family: "Lato";
+          font-weight: 900;
+          font-size: 46px;
+          text-align: center;
+          color: #1e212c;
+          margin-bottom: 60px;
+        }
+        .subscribe__center-form {
+          max-width: 606px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          .subscribe__center-form__input {
+            min-width: 100%;
+            min-height: 52px;
+            padding: 13px 16px;
+            margin-right: 24px;
+            font-family: "Lato";
+            font-weight: 400;
+            font-size: 16px;
+            color: #9a9ca5;
+            border: 1px solid #9a9ca5;
+            border-radius: 4px;
+            background-color: #fff;
+            outline: none;
+            margin-bottom: 16px;
+            &::placeholder {
+              font-family: "Lato";
+              font-weight: 400;
+              font-size: 16px;
+              color: #9a9ca5;
+            }
+          }
+
+          .subscribe__center-form__button {
+          }
+        }
+      }
+
+      .subscribe__img {
+      }
+    }
+  }
+}
