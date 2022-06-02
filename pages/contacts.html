@@ -9,12 +9,131 @@
       href="https://fonts.googleapis.com/css?family=Lato:400,700,900"
       rel="stylesheet"
     />
-    <script src="./contacts/main.js" defer></script>
+    <script src="./contacts/contacts.js" defer></script>
     <title>Contacts</title>
   </head>
   <body>
     <div class="wrapper">
       <header id="header">
+        <section class="modals">
+          <div class="modals__wrapper">
+            <div class="login__modal modal" data-modal="login__modal">
+              <h2 class="login__modal-title">Sign in</h2>
+              <p class="login__modal-descr">
+                Sign in to your account using email and password provided during
+                registration.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="login__modal-form__footer">
+                  <div class="subscribe__info-checkbox">
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="contact"
+                      value="email"
+                      class="subscribe__info-checkbox__input"
+                    />
+
+                    <label for="agree" class="subscribe__info-checkbox__label"
+                      >Keep me signed in</label
+                    >
+                  </div>
+
+                  <span class="login__form-footer__text">Forgot password?</span>
+                </div>
+
+                <button class="modal__button">Sign in</button>
+              </form>
+            </div>
+
+            <div class="register__modal modal" data-modal="register__modal">
+              <h2 class="login__modal-title">Sign up</h2>
+              <p class="login__modal-descr">
+                Registration takes less than a minute but gives you full control
+                over your studying.
+              </p>
+              <form action="#" class="login__modal-form">
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Full name</span>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your full name"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Email</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your working email"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Your password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="data__info-form__item">
+                  <span class="data__form-item__text">Confirm password</span>
+                  <input
+                    type="password"
+                    required
+                    placeholder="Repeat password"
+                    class="data__form-item__input"
+                  />
+                </div>
+
+                <div class="subscribe__info-checkbox">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="contact"
+                    value="email"
+                    class="subscribe__info-checkbox__input"
+                  />
+
+                  <label for="agree" class="subscribe__info-checkbox__label"
+                    >Remember me</label
+                  >
+                </div>
+
+                <button class="modal__button">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="header__mobile"></div>
+
         <div class="header__container">
           <div class="header__top">
             <div class="header__top-left">
@@ -53,6 +172,7 @@
                 </ul>
               </nav>
             </div>
+
             <div class="header__top-right">
               <button class="header__top-right__button btn__homepage">
                 Get consultation
@@ -64,9 +184,26 @@
                   class="header__right-login__img"
                 />
                 <div class="header__right-login__text">
-                  <span class="header__login-text__login">Log in</span>
-                  / <span class="header__login-text__register">Register</span>
+                  <span
+                    class="header__login-text__login header__button"
+                    data-path__modal="login__modal"
+                    >Log in</span
+                  >
+                  /
+                  <span
+                    class="header__login-text__register header__button"
+                    data-path__modal="register__modal"
+                    >Register</span
+                  >
                 </div>
+              </div>
+            </div>
+
+            <div class="header__hamb">
+              <div class="header__hamb-field">
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
+                <span class="header__hamb-field__line"></span>
               </div>
             </div>
           </div>
@@ -381,7 +518,7 @@
               />
               by Createx Studio
             </p>
-            <span class="footer__footer-right">GO TO TOP</span>
+            <a class="footer__footer-right" href="#header">GO TO TOP</a>
           </div>
         </div>
       </footer>

@@ -67,11 +67,37 @@ for (let anchor of anchors) {
   })
 }
 
-// SWIPER
-new Swiper(".testimonials__box", {
+// ACCORDION
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".about__left-accordion__item")
+
+  accordions.forEach((el) => {
+    el.addEventListener("click", (ev) => {
+      //Находим текущий аккордеон
+      const self = ev.currentTarget
+      //Находим текущий элемент, на который мы кликнули
+      const controlClick = self.querySelector(".about__left-accordion__button")
+      //Находим текущий контент аккордеона
+      const content = self.querySelector(".about__left-accordion__info")
+
+      //Добавляем класс открытия контента при клике на аккордеон
+      self.classList.toggle("open")
+
+      //Анимация открытия
+      if (self.classList.contains("open")) {
+        //Находим высоту блока
+        content.style.maxHeight = content.scrollHeight + "px"
+      } else {
+        content.style.maxHeight = null
+      }
+    })
+  })
+})
+
+new Swiper(".events__body", {
   navigation: {
-    nextEl: ".testimonials__body-rightArrow",
-    prevEl: ".testimonials__body-leftArrow",
+    nextEl: ".events__arrowsRight-img",
+    prevEl: ".events__arrowsLeft-img",
   },
   grabCursor: true,
   keyboard: {
@@ -80,10 +106,10 @@ new Swiper(".testimonials__box", {
   },
   mousewheel: {
     sensitivity: 1,
-    eventsTarget: ".testimonials__item",
+    eventsTarget: ".events__body-wrapper__item",
   },
   autoHeight: false,
-  slidesPerView: 1,
+  slidesPerView: 3,
   watchOverflow: true,
   spaceBetween: 30,
   slidesPerGroup: 1,
@@ -92,31 +118,9 @@ new Swiper(".testimonials__box", {
   freeMode: true,
   autoplay: {
     delay: 3000,
-    stopOnLastSlide: true,
+    stopOnLastSlide: false,
     disableOnInteraction: false,
   },
   loop: true,
   speed: 700,
 })
-
-// SEARCH
-// window.onload = () => {
-//   let input = document.querySelector(".courses__header-search")
-//   input.oninput = function () {
-//     let value = this.value.trim()
-//     let titles = document.querySelectorAll(".courses__item-content__title")
-//     let items = document.querySelectorAll(".courses__body-item")
-
-//     if (value != "") {
-//       titles.forEach((title) => {
-//         if (title.innerText.toLowerCase().search(value) == -1) {
-//           title.classList.add("backcolor")
-//         }
-//       })
-//     } else {
-//       titles.forEach((title) => {
-//         title.classList.remove("backcolor")
-//       })
-//     }
-//   }
-// }
