@@ -1055,7 +1055,8 @@ body .wrapper #main .subscribe .subscribe__container .subscribe__info .subscribe
   background-color: #ff3f3a;
 }
 body .wrapper #main .blog {
-  margin-bottom: 180px;
+  background-color: #f4f5f7;
+  padding: 120px 0px;
 }
 body .wrapper #main .blog .blog__container .blog__header {
   display: -webkit-box;

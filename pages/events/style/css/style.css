@@ -697,6 +697,9 @@ body .wrapper #main .events .events__container .events__pagination .events__pagi
 body .wrapper #main .events .events__container .events__pagination .events__pagination-arrow {
   cursor: pointer;
 }
+body .wrapper #main .subscribe {
+  background-color: #f4f5f7;
+}
 body .wrapper #main .subscribe .subscribe__container {
   padding-top: 120px;
   min-height: 564px;
