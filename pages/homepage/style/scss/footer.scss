@@ -3,7 +3,7 @@
   .footer__body {
     padding: 80px 0px 60px 0px;
     background-color: #1e212c;
-    @media (max-width: 375px) {
+    @media (max-width: 425px) {
       padding: 28px 0px;
     }
     .footer__container {
@@ -12,17 +12,17 @@
       align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
-      @media (max-width: 375px) {
+      @media (max-width: 425px) {
         display: block;
       }
       .footer__body-left {
         max-width: 279px;
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
           max-width: 100%;
         }
         .footer__left-img__box {
           margin-bottom: 24px;
-          @media (max-width: 375px) {
+          @media (max-width: 425px) {
             margin-bottom: 8px;
           }
           .footer__left-img {
@@ -36,7 +36,7 @@
           color: #ffffff;
           opacity: 0.6;
           margin-bottom: 38px;
-          @media (max-width: 375px) {
+          @media (max-width: 425px) {
             margin-bottom: 20px;
           }
         }
@@ -44,7 +44,7 @@
         .footer__left-socials {
           display: flex;
           align-items: center;
-          @media (max-width: 375px) {
+          @media (max-width: 425px) {
             display: none;
           }
           .footer__socials-img__box {
@@ -59,7 +59,7 @@
       }
 
       .footer__body-list {
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
           display: none;
         }
         .footer__body-list__title {
@@ -83,7 +83,7 @@
       }
 
       .footer__body-contact {
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
           display: none;
         }
         .footer__body-contact__title {
@@ -116,7 +116,7 @@
 
       .footer__body-newsletter {
         max-width: 286px;
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
           max-width: 100%;
         }
         .footer__body-newsletter__title {
@@ -126,7 +126,7 @@
           text-transform: uppercase;
           color: #ffffff;
           margin-bottom: 24px;
-          @media (max-width: 375px) {
+          @media (max-width: 425px) {
             margin-bottom: 16px;
           }
         }
@@ -143,7 +143,7 @@
           opacity: 0.6;
           outline: none;
           margin-bottom: 12px;
-          @media (max-width: 375px) {
+          @media (max-width: 425px) {
             min-width: 100%;
           }
         }
@@ -185,7 +185,7 @@
         color: #ffffff;
         opacity: 0.6;
         cursor: pointer;
-        @media (max-width: 375px) {
+        @media (max-width: 425px) {
           display: none;
         }
       }
